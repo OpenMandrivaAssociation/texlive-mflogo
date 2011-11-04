@@ -1,3 +1,9 @@
+# revision 17487
+# category Package
+# catalog-ctan /macros/latex/contrib/mflogo
+# catalog-date 2010-03-14 23:46:18 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-mflogo
 Version:	20100314
 Release:	1
@@ -83,6 +89,7 @@ MetaFont logos in LaTeX documents.
 %doc %{_texmfdistdir}/source/latex/mflogo/README
 %doc %{_texmfdistdir}/source/latex/mflogo/mflogo.dtx
 %doc %{_texmfdistdir}/source/latex/mflogo/mflogo.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -93,3 +100,5 @@ MetaFont logos in LaTeX documents.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
