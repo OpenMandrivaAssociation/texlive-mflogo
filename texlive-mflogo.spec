@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-mflogo
 Version:	20100314
-Release:	4
+Release:	5
 Summary:	LaTeX support for MetaFont logo fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mflogo
