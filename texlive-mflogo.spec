@@ -1,13 +1,14 @@
-# revision 17487
+# revision 32865
 # category Package
 # catalog-ctan /macros/latex/contrib/mflogo
-# catalog-date 2010-03-14 23:46:18 +0100
+# catalog-date 2012-06-24 11:08:44 +0200
 # catalog-license lppl
-# catalog-version undef
+# catalog-version 2.0
+Epoch:		1
 Name:		texlive-mflogo
-Version:	20100314
-Release:	6
-Summary:	LaTeX support for MetaFont logo fonts
+Version:	2.0
+Release:	1
+Summary:	LaTeX support for Metafont logo fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mflogo
 License:	LPPL
@@ -21,8 +22,8 @@ Requires(post):	texlive-kpathsea
 
 %description
 LaTeX package and font definition file to access the Knuthian
-mflogo fonts described in 'The MetaFontbook' and to typeset
-MetaFont logos in LaTeX documents.
+mflogo fonts described in 'The Metafontbook' and to typeset
+Metafont logos in LaTeX documents.
 
 %post
     %{_sbindir}/texlive.post
@@ -49,10 +50,8 @@ MetaFont logos in LaTeX documents.
 %{_texmfdistdir}/fonts/source/public/mflogo/logo8.mf
 %{_texmfdistdir}/fonts/source/public/mflogo/logo9.mf
 %{_texmfdistdir}/fonts/source/public/mflogo/logobf10.mf
-%{_texmfdistdir}/fonts/source/public/mflogo/logod10.mf
 %{_texmfdistdir}/fonts/source/public/mflogo/logosl10.mf
 %{_texmfdistdir}/fonts/source/public/mflogo/logosl8.mf
-%{_texmfdistdir}/fonts/source/public/mflogo/logosl9.mf
 %{_texmfdistdir}/fonts/source/public/mflogo/nlogo.mf
 %{_texmfdistdir}/fonts/source/public/mflogo/sklogo.mf
 %{_texmfdistdir}/fonts/tfm/public/mflogo/logo10.tfm
@@ -90,17 +89,3 @@ MetaFont logos in LaTeX documents.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100314-2
-+ Revision: 753935
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100314-1
-+ Revision: 719008
-- texlive-mflogo
-- texlive-mflogo
-- texlive-mflogo
-- texlive-mflogo
-
