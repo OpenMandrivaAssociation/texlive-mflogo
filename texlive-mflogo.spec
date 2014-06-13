@@ -7,7 +7,7 @@
 Epoch:		1
 Name:		texlive-mflogo
 Version:	2.0
-Release:	1
+Release:	2
 Summary:	LaTeX support for Metafont logo fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mflogo
