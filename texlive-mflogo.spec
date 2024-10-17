@@ -4,7 +4,7 @@ Version:	42428
 Release:	2
 Summary:	LaTeX support for Metafont logo fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mflogo
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/mflogo
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mflogo.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mflogo.doc.r%{version}.tar.xz
