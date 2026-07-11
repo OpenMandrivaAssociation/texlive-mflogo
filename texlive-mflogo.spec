@@ -1,48 +1,23 @@
+%global tl_name mflogo
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
 Epoch:		1
-Name:		texlive-mflogo
-Version:	42428
-Release:	2
+Version:	2.0
+Release:	%{tl_revision}.1
 Summary:	LaTeX support for Metafont logo fonts
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/mflogo
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mflogo.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mflogo.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mflogo.source.r%{version}.tar.xz
+License:	lppl1
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/mflogo.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/mflogo.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/mflogo.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-LaTeX package and font definition file to access the Knuthian
-mflogo fonts described in 'The Metafontbook' and to typeset
-Metafont logos in LaTeX documents.
+LaTeX package and font definition file to access the Knuthian mflogo
+fonts described in 'The Metafontbook' and to typeset Metafont logos in
+LaTeX documents.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/fonts/source/public/mflogo
-%{_texmfdistdir}/fonts/tfm/public/mflogo
-%{_texmfdistdir}/tex/latex/mflogo
-%doc %{_texmfdistdir}/doc/latex/mflogo
-#- source
-%doc %{_texmfdistdir}/source/latex/mflogo
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
